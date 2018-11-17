@@ -5,6 +5,29 @@
 </head>
 <body>
 	<p>Hello World!</p>
-	<script></script>
+	<script>
+		let Intro_part = 1;
+		function NewGame(){
+			document.getElementById("New_game").removeAttribute("href");
+			document.getElementById("New_game_confirm").removeAttribute("style");
+			document.getElementById("New_game").innerHTML = "That will overwrite the saved game";
+		}
+		function SkipIntro(){
+
+		}
+		function ShowIntro(){
+
+		}
+		function Continue(){
+			if(Intro_part==1){document.getElementById("Fade1").removeAttribute("style")}
+			else if(Intro_part==2){document.getElementById("Fade2").removeAttribute("style")}
+			else if(Intro_part==3){document.getElementById("Fade3").removeAttribute("style")}
+			else if(Intro_part==4){SkipIntro()}
+			fade++;
+		}
+		function ShowStatusBars(){
+
+		}
+	</script>
 </body>
 </html>
