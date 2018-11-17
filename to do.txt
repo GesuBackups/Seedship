@@ -1,0 +1,21 @@
+- zrobiæ wskaŸniki po lewej stronie ekranu tak jak tu:
+
+https://imgur.com/a/njkD2lb
+
+zrób to w tabeli i daj % id np:
+
+
+Atmosphere: 100% <- <p id="atmosphere_level">
+Gravity:    100% <- <p id="gravity_level">
+
+(przyk³ad takiej tabeli masz w pliku 'przyk³ad.txt')
+- zrobiæ skanery planety tak jak tu:
+
+https://imgur.com/a/LbZ9gnQ
+
+tutaj id daj takie:
+
+Atmosphere:   Marginal <- <p id="atmosphere_status">
+Gravity:      High <- <p id="gravity_status">
+
+zrób to najlepiej w tabeli podobnej do wskaŸników.

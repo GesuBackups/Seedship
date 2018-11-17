@@ -1,32 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<title>Seeship</title>
+	<link rel="stylesheet" type="text/css" media="screen" href="css.css">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 </head>
 <body>
-	<p>Hello World!</p>
+	<nav class="main_menu">
+		<span id="logo">Seedship</span>
+		<nav class="options">
+			<span id="new_game"><a id="new_game2" href="#" onclick="NewGame()">Nowa gra</a><a id="new_game_confirm" href="#" style="display:none" onclick="ShowIntro()">Potwierdzam</a></span>
+			<p id="continue">Kontynuuj</p>
+			<p id="past_missions">Poprzednie misje</p>
+			<p id="credits">Twórcy</p>
+		</nav>
+	</nav>
+	<nav class="intro">
+		<span id="fade0" style="display:none">Historia0<br></span>
+		<span id="fade1" style="display:none">Historia1<br></span>
+		<span id="fade2" style="display:none">Historia2<br></span>
+		<span id="continue" onclick="Continue()" style="display:none">Kontynuuj</span>
+		<span id="skip_intro" onclick="SkipIntro()" style="display:none">Pomiń</span>
+	</nav>
 	<script>
 		let Intro_part = 1;
 		function NewGame(){
-			document.getElementById("New_game").removeAttribute("href");
-			document.getElementById("New_game_confirm").removeAttribute("style");
-			document.getElementById("New_game").innerHTML = "That will overwrite the saved game";
+			document.getElementById("new_game2").removeAttribute("href");
+			document.getElementById("new_game_confirm").removeAttribute("style");
+			document.getElementById("new_game2").innerHTML = "Nadpisze to istniejącą grę.";
 		}
 		function SkipIntro(){
-
+			let intro = document.getElementsByClassName("intro");
+			intro[0].parentNode.removeChild(intro[0]);
+			ShowStatusBars();
 		}
 		function ShowIntro(){
+			if(Intro_part===1){
+				let menu=document.getElementsByClassName('main_menu');
+				menu[0].parentNode.removeChild(menu[0]);
 
+				document.getElementById('fade0').style.removeProperty("display");
+				document.getElementById('continue').style.removeProperty("display");	
+				document.getElementById('skip_intro').style.removeProperty("display");		
+			}
+			else if(Intro_part===2){
+				document.getElementById("fade1").style.removeProperty("display");	
+			}
+			else if(Intro_part===3){
+				document.getElementById("fade2").style.removeProperty("display");	
+			}
 		}
 		function Continue(){
-			if(Intro_part==1){document.getElementById("Fade1").removeAttribute("style")}
-			else if(Intro_part==2){document.getElementById("Fade2").removeAttribute("style")}
-			else if(Intro_part==3){document.getElementById("Fade3").removeAttribute("style")}
-			else if(Intro_part==4){SkipIntro()}
-			fade++;
+			Intro_part++;
+			if(Intro_part==4){SkipIntro()}
+			else{ShowIntro()}
 		}
 		function ShowStatusBars(){
-
 		}
 	</script>
 </body>

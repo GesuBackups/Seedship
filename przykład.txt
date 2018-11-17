@@ -1,0 +1,49 @@
+<div class="Status_Bar">
+	<div id="Status-bar-display">
+		<div id="colonists">
+			<table style="margin-bottom: 1em;">
+				<tr>
+					<td style="padding-bottom: 0.2em; width: 170px;"><strong style="font-size: 15px;">Colonists:</strong></td>
+					<td id="status-bar-display-colonists" style="padding-bottom: 0.2em;">1000</td>
+					<td style="padding-bottom: 0.2em; width: 28px;"></td>
+				</tr>
+			</table>
+		</div>
+		<div id="scanners">
+			<table style="margin-bottom: 1em;">
+				<colgroup>
+					<col class="status-bar-display-text-column">
+					<col class="status-bar-display-number-column">
+					<col class="status-bar-display-change-column">
+				</colgroup>
+				<tr>
+					<td style="padding-bottom: 0.2em;"><strong>Scanners:</strong></td>
+				</tr>
+				<tr>
+					<td style="padding-bottom: 0.2em; width: 170px;">Atmosphere:</td>
+					<td id="status-display-atmosphere" style="padding-bottom: 0.2em;">
+						<span style="color: rgb(13, 229, 49);">100%</span>
+					</td>
+					<td style="padding-bottom: 0.2em; width: 28px;"></td>
+				</tr>
+				<tr>
+					<td style="padding-bottom: 0.2em; width: 170px;">Gravity:</td>
+					<td id="status-display-gravity" style="padding-bottom: 0.2em;">
+						<span style="color: rgb(13, 229, 49);">100%</span>
+					</td>
+					<td style="padding-bottom: 0.2em; width: 28px;"></td>
+				</tr>
+			</table>
+		</div>
+		<div id="systems">
+			.
+			.
+			.
+		</div>
+		<div id="databases">
+			.
+			.
+			.
+		</div>
+	</div>
+</div>

@@ -1,0 +1,18 @@
+body{
+	background-image: url('img/starfield.png');
+	font-family: 'Ubuntu', sans-serif; 
+	color: #ffff;
+}
+.main_menu{
+	text-align: center;
+	width: 40%;
+	margin: auto;
+	margin-top: 150px;
+}
+.main_menu>#logo{
+	font-size: 40px;
+}
+p, .options{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
